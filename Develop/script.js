@@ -8,7 +8,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-};
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
@@ -24,14 +24,19 @@ function generatePassword() {
 
   var characterTypes = "";
   var finalPassword = "";
+  var lowerCasePrompt = "";
+  var upperCasePrompt = "";
+  var symbolsPrompt = "";
+  var numbersPrompt = "";
+  var finalCharacterTypes = "";
+  var charactersTotal = "";
   
  passwordChar();
 
- function passwordChar() {
+function passwordChar() {
   characterTypes = "";
   
-  passwordLength = parseInt(prompt("Please choose password length between 8-128 characters"));
-
+  passwordLength = parseInt(prompt("Please choose password length between 8-128 characters"))
   // if statement in which the characters prompt isn't fulfilled
   if (passwordLength < 8 || passwordLength > 128) {
     passwordLength = window.alert("Must be between 8-128 characters!");
@@ -57,10 +62,10 @@ function generatePassword() {
     characterTypes += numbers;  
   } 
 
-
 // For loop for password length
-  for (var i = passwordLength; i < 0; i--) {
-    finalPassword = passwordChar[Math.floor(Math.random() * passwordLength.length)];
-  } 
-  return finalPassword;
-};
+  for (var i = 0; i < passwordLength; i++) {
+    finalCharacterTypes = Math.floor(Math.random() * characterTypes.length);
+    charactersTotal = characterTypes[finalCharacterTypes];
+    finalPassword = finalPassword + charactersTotal;
+  } return (finalPassword)
+}
