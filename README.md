@@ -12,9 +12,9 @@ To create a password generator that takes in user feedback and gives out a uniqu
 
 ## Images 
 
-<img src="./assets/Capture.JPG>" />
+<img src="./assets/images/password_generator1.JPG" />
 
-<img src=".assets/Capture2.JPG>" />
+<img src="./assets/images/password_generator2.JPG" />
 
 ## Website
 
